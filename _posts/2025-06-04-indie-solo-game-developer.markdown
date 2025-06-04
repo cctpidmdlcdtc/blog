@@ -13,11 +13,10 @@ Despierto, reviso la web. La bbdd permanece inmutable, como una roca que se desh
 # Llamado a la aventura
 Dice ChatGPT que además de publicar 3 vídeos cortos diarios, debería hacer un blog. Seguro que mejora el SEO muchíiiiiiiiisimo. Sarcasmo nivel planeta. Me río yo solo, porque nadie más lo hará.
 
-Instalo Jekyll y Bundler y lo arranco:
+Instalo Jekyll y Bundler y lo configuro con cariño:
 
 ```shell
 gem install jekyll bundler
-bundle exec jekyll serve
 ```
 
 
@@ -29,46 +28,13 @@ El enemigo es la [erosión](https://erosion.es): cada día, menos ganas, menos v
 
 # Encuentro con el mentor
 
-GoatCounter hace que solo 2 líneas te separen del contador de tu soledad:
+GoatCounter hace que solo 2 líneas te separen del contador de tu soledad. Suena fantástico.
 
-```js
-<script data-goatcounter="https://erosion.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-```
-
-Suena fantástico.
-
-
-# Cruzando el umbral
-
-Lo configuro con precisión suiza, para saber exactamente cuántos no vienen, metiendo esto en el fichero _layouts/default.html_:
+Lo configuro con precisión suiza, para saber exactamente cuántos no vienen, metiendo esto en el _head_ del _layouts/default.html_:
 
 ```html
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-    
-    <!-- GoatCounter Analytics -->
-    {% if jekyll.environment == "production" %}
-    <script data-goatcounter="https://erosion.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
-    {% endif %}
-</head>
-
-<body>
-    <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-        {{ content }}
-    </div>
-    </main>
-</body>
-</html>
+<script data-goatcounter="https://erosion.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 ```
 
 Y retoco el _config.yml_ de mi blog:
@@ -90,7 +56,7 @@ goatcounter:
 ```
 
 
-# Aproximación y prueba suprema
+# Cruzando el umbral
 Lanzo el blog:
 
 ```shell
@@ -105,15 +71,8 @@ Lo reviso desde el móvil y el ordenador, como si esperara sorprenderme. El cont
 La recompensa es saber, con precisión quirúrgica, que nadie viene. Y aun así, el circuito sigue ahí. El código sigue ahí. Yo sigo ahí.
 
 
-# Camino de regreso y expiación
-
-
-
-
-
 # Regreso con elixir
 Decido reemplazar la home con un haiku:
-
 
 ```html
 <h1>Error 418:</h1>
